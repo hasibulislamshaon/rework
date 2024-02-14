@@ -41,7 +41,7 @@ def validateHomePageTopBanner(image):
 
 class myDashboard(models.Model):
     title = models.CharField(max_length=100,default='')
-    slug = models.SlugField(default="", null=False)
+    slug = models.SlugField(blank=True, null=False,unique=True)
     gateOpens=models.DateTimeField( blank=True,null=True)
     gateCloses=models.DateTimeField(blank=True,null=True)
     organizer=models.CharField(max_length=500,blank=True)
@@ -54,7 +54,7 @@ class myDashboard(models.Model):
     artist=models.CharField(max_length=100,blank=True)
     templateName=models.CharField(max_length=200,blank=True)
     location=models.CharField(max_length=250,default='')
-    status=models.CharField(max_length=50,choices=selectOne,default='None')
+    status=models.CharField(max_length=50,choices=selectOne,blank=False)
     isLive=models.BooleanField(default=False)
     description=RichTextField(blank=True)
     acknowledgement=RichTextField(blank=True)
@@ -71,6 +71,13 @@ class myDashboard(models.Model):
 
     def __str__(self):
         return self.title
+class TicketType(models.Model):
+    name=models.CharField(max_length=500)
+    price=models.PositiveIntegerField()
+    quangtity=models.IntegerField()
+    myDashboard=models.ForeignKey(myDashboard,on_delete=models.CASCADE)
+
+
     
 
     

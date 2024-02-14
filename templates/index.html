@@ -11,14 +11,22 @@
     {% for n in dashboardData %}
 <div class="ticket-card">
   <div class="ticket-header">
-    <h2 class="ticket-title {{n.title}}"></h2>
-    <img src="{{n.banner}}" alt="dummy">
-    <span class="ticket-date">Date: January 1, 2025</span>
+    <h2 class="ticket-title ">{{n.title}}</h2>
+    <img src="{{n.secondBanner.url}}" alt="dummy">
+    
   </div>
   <div class="ticket-details">
-    <p class="ticket-info">Location: Venue Name</p>
-    <p class="ticket-info">Time: 7:00 PM</p>
-    <p class="ticket-info">Ticket ID: ABC123</p>
+    <p class="ticket-info">Artist:{{n.artist}}</p>
+    <p class="ticket-info">Location:{{n.location}}</p>
+    <p class="ticket-info">Gate Opens: {{n.gateOpens}}</p>
+    <p class="ticket-info">Gate Closes:{{n.gateCloses}}</p>
+    <p class="ticket-info">Description: {{n.description}}</p>
+    <br>
+    <span class="ticket-date">Acknowledgement: {{n.acknowledgement}}</span>
+    <br>
+    <span class="ticket-date">Ticket Policy: {{n.ticketPolicy}}</span>
+    <br>
+    <span class="ticket-date">Event Faq: {{n.eventFaq}}</span>
   </div>
 </div>
 {% endfor %}

@@ -1,0 +1,40 @@
+.ticket-card {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+.ticket-header {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.ticket-title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.ticket-date {
+    font-size: 14px;
+    color: #666;
+}
+
+.ticket-details {
+    font-size: 16px;
+    color: #555;
+}
+
+.ticket-info {
+    margin: 5px 0;
+}
+img{
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}

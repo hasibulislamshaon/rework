@@ -11,7 +11,7 @@ selectOne=(
     
 def validateBannerSize(image):
     #validate the size
-    required_width = 100
+    required_width = 1000
     required_height = 523
     
     if image.width != required_width or image.height != required_height:

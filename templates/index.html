@@ -1,11 +1,26 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ticket Card Demo</title>
+<link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt explicabo rerum praesentium corporis debitis blanditiis!
+    {% for n in dashboardData %}
+<div class="ticket-card">
+  <div class="ticket-header">
+    <h2 class="ticket-title {{n.title}}"></h2>
+    <img src="{{n.banner}}" alt="dummy">
+    <span class="ticket-date">Date: January 1, 2025</span>
+  </div>
+  <div class="ticket-details">
+    <p class="ticket-info">Location: Venue Name</p>
+    <p class="ticket-info">Time: 7:00 PM</p>
+    <p class="ticket-info">Ticket ID: ABC123</p>
+  </div>
+</div>
+{% endfor %}
 </body>
 </html>

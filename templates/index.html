@@ -16,17 +16,17 @@
     
   </div>
   <div class="ticket-details">
-    <p class="ticket-info">Artist:{{n.artist}}</p>
-    <p class="ticket-info">Location:{{n.location}}</p>
-    <p class="ticket-info">Gate Opens: {{n.gateOpens}}</p>
-    <p class="ticket-info">Gate Closes:{{n.gateCloses}}</p>
-    <p class="ticket-info">Description: {{n.description}}</p>
+    <p class="ticket-info"><strong>Artist:</strong>{{n.artist}}</p>
+    <p class="ticket-info"><strong>Location:</strong>{{n.location}}</p>
+    <p class="ticket-info"><strong>Gate Opens: </strong>{{n.gateOpens}}</p>
+    <p class="ticket-info"><strong>Gate Closes:</strong>{{n.gateCloses}}</p>
+    <p class="ticket-date"><strong>Description:</strong> {{n.description|safe}}</p>
     <br>
-    <span class="ticket-date">Acknowledgement: {{n.acknowledgement}}</span>
+    <span class="ticket-date"><strong>Acknowledgement:</strong> {{n.acknowledgement|safe}}</span>
     <br>
-    <span class="ticket-date">Ticket Policy: {{n.ticketPolicy}}</span>
+    <span class="ticket-date"><strong>Ticket Policy:</strong> {{n.ticketPolicy|safe}}</span>
     <br>
-    <span class="ticket-date">Event Faq: {{n.eventFaq}}</span>
+    <span class="ticket-date"><strong>Event Faq:</strong> {{n.eventFaq|safe}}</span>
   </div>
 </div>
 {% endfor %}

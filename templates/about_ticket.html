@@ -1,0 +1,29 @@
+{% load static %}
+{% for n in dashboardData %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Page</title>
+  <link rel="stylesheet" href="{% static 'aboutTicket.css'%}">
+</head>
+<body>
+  <div class="container">
+    <img src="https://via.placeholder.com/800x400" alt="Placeholder Image">
+    <div class="description">
+      <h2>Description</h2>
+      <p>{{n.description|safe}}</p>
+    </div>
+    <div class="policy">
+      <h2>Policy</h2>
+      <p>This is the policy section. You can outline any policies, terms, or conditions here.</p>
+    </div>
+    <div class="acknowledgement">
+      <h2>Acknowledgement</h2>
+      <p>This is the acknowledgment section. You can mention any acknowledgments or credits here.</p>
+    </div>
+  </div>
+</body>
+</html>
+{% endfor %}

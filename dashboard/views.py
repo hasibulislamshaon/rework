@@ -10,3 +10,5 @@ def Ticket(request):
 
     }
     return render(request,'index.html',data)
+def aboutTicket(request):
+    return render(request,'about_ticket.html')

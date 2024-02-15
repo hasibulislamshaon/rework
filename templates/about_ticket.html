@@ -1,5 +1,4 @@
 {% load static %}
-{% for n in dashboardData %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +12,7 @@
     <img src="https://via.placeholder.com/800x400" alt="Placeholder Image">
     <div class="description">
       <h2>Description</h2>
-      <p>{{n.description|safe}}</p>
+      <p>{{dashboardData.description|safe}}</p>
     </div>
     <div class="policy">
       <h2>Policy</h2>
@@ -26,4 +25,4 @@
   </div>
 </body>
 </html>
-{% endfor %}
+

@@ -62,3 +62,9 @@ body {
     border-top: 1px solid #ccc;
     padding-top: 20px;
   }
+  .location:hover,.about:hover{
+    background-color: greenyellow;
+  }
+  .about{
+    border: 1px solid black;
+  }

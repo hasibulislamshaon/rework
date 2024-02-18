@@ -1,3 +1,4 @@
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -27,9 +28,14 @@
     <span class="ticket-date"><strong>Ticket Policy:</strong> {{n.ticketPolicy|safe}}</span>
     <br>
     <span class="ticket-date"><strong>Event Faq:</strong> {{n.eventFaq|safe}}</span>
-    <a href="{% url 'about_ticket' %}">Buy</a>
+    <a href="/about/{{n.slug}}/{{n.id}}" class="btn btn-primary">About Ticket</a>
   </div>
 </div>
 {% endfor %}
+<div class="details">
+    {% block content %}
+    {% endblock %}
+</div>
+    
 </body>
 </html>

@@ -71,6 +71,16 @@ class myDashboard(models.Model):
 
     def __str__(self):
         return self.title
+    """@property 
+    def imageUrl(self):
+        try:
+            url= self.banner.url
+        except:
+            url=''
+        return url"""#!important If image field is empty.
+    
+
+
 class TicketType(models.Model):
     name=models.CharField(max_length=500)
     price=models.PositiveIntegerField()

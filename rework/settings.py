@@ -136,6 +136,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 #Jet Admin theme
+
 JET_THEMES = [
     {
         'theme': 'default', # theme folder name
